@@ -1,0 +1,146 @@
+body {
+    background-color: #ffe4e1;
+    font-family: "Playwrite NZ", serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+    text-align: center;
+    padding-top: 50px;
+
+}
+
+.playwrite-nz-fonts {
+    font-family: "Playwrite NZ", serif;
+    font-optical-sizing: auto;
+    font-weight: 20;
+    font-style: normal;
+  }
+
+.container {
+    text-align: center;
+    background: #fff0f5;
+    padding: 80px;
+    border: 2px solid #ff69b4;
+    border-radius: 20px;
+    width: 60%;
+    margin: auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px; /* Space between the text and the GIFs */
+    margin-bottom: 20px;  /* Space between the text and the GIFs */
+}
+
+
+h1 {
+    color: #ff1493;
+    margin-bottom: 20px;
+}
+
+button {
+    background-color: #ff69b4;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 5px;
+    font-size: 16px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background-color: #ff1493;
+}
+
+#noButton {
+    position: relative;
+}
+
+.love-message {
+    font-size: 24px;
+    color: #ff1493;
+    margin-top: 20px;
+    display: none;
+}
+
+.cute-gif {
+    width: 100px;
+    margin-top: 20px;
+}
+
+
+.gif {
+    width: 80px; /* Adjust size */
+    display: block;
+    margin: 10px auto; /* Center the GIFs */
+    border-radius: 10px;
+}
+
+/* Styling for the Yay message */
+.message-container {
+    position: relative;
+    display: inline-block;
+    text-align: center;
+    padding-bottom: 100px; /* Add space below the message for the moving GIF */
+}
+
+.message-text {
+    font-family: "Playwrite NZ", serif;
+    font-size: 3rem;
+    color: #ff4d79;
+    margin: 0;
+    padding: 20px;
+   
+}
+
+/* Styling for the GIFs */
+.yay-gif {
+    width: 100px; /* Adjust the size of the GIFs */
+    height: auto;
+    transition: all 0.5s ease;
+}
+
+/* Position the left and right GIFs */
+.left-gif {
+    position: absolute;
+    left: -120px; /* Move to the left of the text */
+    top: 50%;
+    transform: translateY(-50%);
+    padding-bottom: 100px;
+}
+
+.right-gif {
+    position: absolute;
+    right: -120px; /* Move to the right of the text */
+    top: 50%;
+    transform: translateY(-50%);
+    padding-bottom: 100px;
+}
+
+
+.moving-gif {
+    position: absolute;
+    bottom: 0;  /* Positioned just at the very bottom of the screen */
+    left: 0;
+    width: 100px;  /* Adjust the width of the GIF */
+    animation: moveBanner 10s linear infinite;
+}
+
+/* Animation for the moving GIF */
+@keyframes moveBanner {
+    0% {
+        left: -100px; /* Start off-screen on the left */
+    }
+    100% {
+        left: 100%;  /* Move to the right side of the page */
+    }
+
+}
